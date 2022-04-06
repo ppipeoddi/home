@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form action="" name="iscrizione" onsubmit="validazione()">
+        <fieldset>
+            <legend>Iscrizione</legend>
+            <label for="nome">Nome</label> <input type="text" name="nome">
+            <label for="cognome">Cognome</label> <input type="text" name="cognome">
+            <p><label for="email">Email </label><input type="email" name="email">
+            <label for="telefono">Telefono </label> <input type="number" name="telefono"></p>
+            <input type="submit" > <input type="reset" value="Reset">
+
+        </fieldset>
+    </form>
+
+    <script>
+        function validazione(){
+            if ( document.iscrizione.nome.value==""){
+                alert("Inserire il nome");
+                return false
+
+            }
+            if ( document.iscrizione.cognome.value==""){
+                alert("Inserire il cognome");
+                return false
+
+            }
+            
+            if ( document.iscrizione.email.value==""){
+                alert("Inserire la mail");
+                return false
+
+            }
+            if ( document.iscrizione.telefono.value==""){
+                alert("Inserire il telefono");
+                return false
+
+            }
+
+            alert("Invio dati al server..");
+            return false
+
+        }  
+    </script>
+</body>
+</html>
